@@ -18,7 +18,7 @@ public class IntroToArrayLists {
 			System.out.println(People.get(i));
 		}
 		//4. Print all the Strings using a for-each loop
-		
+		for(String)
 		//5. Print only the even numbered elements in the list.
 		
 		//6. Print all the Strings in reverse order.
