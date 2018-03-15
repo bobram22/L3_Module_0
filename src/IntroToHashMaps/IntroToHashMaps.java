@@ -8,7 +8,7 @@ public class IntroToHashMaps {
 
 	
 	//1. Create a HashMap called roots with Integers for the keys and Doubles for the values.
-	HashMap<Integer,Double>  roots = new HashMap<>() ;
+	HashMap<Integer,Double>  roots = new HashMap<>();
 	//2. Using a for-loop, add 500 entries to your HashMap. The key entry will be the 
 	//   current iteration of the loop (i). The value entry will be the square root of i.
 	for(int i=0; i< 500; i++) {
