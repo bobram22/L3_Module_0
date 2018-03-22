@@ -1,25 +1,38 @@
 package IntroToHashMaps;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashMap;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class LogSearch {
+public class LogSearch implements ActionListener {
 	HashMap<Integer,String>  roots = new HashMap<>();
 	public static void main(String[] args) {
+ LogSearch LS = new LogSearch();
+ LS.setup();
+	}
+	
+	void setup() {
 		JFrame jf = new JFrame();
 		JPanel jp = new JPanel();
-		JButton jb1 = new JButton("One");
-		JButton jb2 = new JButton("Two");
-		JButton jb3 = new JButton("Three");
+		JButton jb1 = new JButton("Add Entry");
+		JButton jb2 = new JButton("Search By ID");
+		JButton jb3 = new JButton("View List");
+		JButton jb4 = new JButton("Remove Entry");
 		jf.add(jp);
 		jf.setVisible(true);
 		jp.add(jb1);
 		jp.add(jb2);
 		jp.add(jb3);
-		jf.setSize(100, 100);
+		jp.add(jb4);
+		jb1.addActionListener(this);
+		jb2.addActionListener(this);
+		jb3.addActionListener(this);
+		jb4.addActionListener(this);
+		jf.setSize(200, 200);
 	}
   /* 
 	 * Crate a HashMap of Integers for the keys and Strings for the values.
@@ -48,4 +61,9 @@ public class LogSearch {
 	 * 				is not in the list. 
 	 *
 	 * */
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }
