@@ -6,22 +6,24 @@ import java.util.HashMap;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class LogSearch implements ActionListener {
 	HashMap<Integer,String>  roots = new HashMap<>();
+	JFrame jf = new JFrame();
+	JPanel jp = new JPanel();
+	JButton jb1 = new JButton("Add Entry");
+	JButton jb2 = new JButton("Search By ID");
+	JButton jb3 = new JButton("View List");
+	JButton jb4 = new JButton("Remove Entry");
 	public static void main(String[] args) {
  LogSearch LS = new LogSearch();
  LS.setup();
 	}
 	
 	void setup() {
-		JFrame jf = new JFrame();
-		JPanel jp = new JPanel();
-		JButton jb1 = new JButton("Add Entry");
-		JButton jb2 = new JButton("Search By ID");
-		JButton jb3 = new JButton("View List");
-		JButton jb4 = new JButton("Remove Entry");
+	
 		jf.add(jp);
 		jf.setVisible(true);
 		jp.add(jb1);
@@ -33,6 +35,14 @@ public class LogSearch implements ActionListener {
 		jb3.addActionListener(this);
 		jb4.addActionListener(this);
 		jf.setSize(200, 200);
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource()==jb1) {
+			String ID = JOptionPane.showInputDialog("What is your ID?");
+			String name = JOptionPane.showInputDialog("");
+		}
 	}
   /* 
 	 * Crate a HashMap of Integers for the keys and Strings for the values.
@@ -61,9 +71,5 @@ public class LogSearch implements ActionListener {
 	 * 				is not in the list. 
 	 *
 	 * */
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }
