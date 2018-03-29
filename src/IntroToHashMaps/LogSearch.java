@@ -40,9 +40,23 @@ public class LogSearch implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource()==jb1) {
-			String ID = JOptionPane.showInputDialog("What is your ID?");
-			String name = JOptionPane.showInputDialog("");
+			String id = JOptionPane.showInputDialog("What is your ID?");
+			String name = JOptionPane.showInputDialog("What is your name?");
+			int ID = Integer.parseInt(id);
+			roots.put(ID, name);
 		}
+		if(e.getSource()==jb2){
+			String nameReturned =JOptionPane.showInputDialog("Enter ID");
+			int ID = Integer.parseInt(nameReturned);
+			String name= roots.get(ID);
+			if(name==null){
+				JOptionPane.showMessageDialog(null, "User not Found");
+			}
+			else{
+			JOptionPane.showMessageDialog(null, name);
+			}
+		}
+		
 	}
   /* 
 	 * Crate a HashMap of Integers for the keys and Strings for the values.
