@@ -61,7 +61,8 @@ public class LogSearch implements ActionListener {
 		if(e.getSource()==jb3) {
 			String log = "Student & ID \n";
 			for(int ID: roots.keySet()) {
-				log+=ID;
+				log+=ID+" "+ roots.get(ID)+"\n";
+				
 			}
 			JOptionPane.showMessageDialog(null, log);
 		}
